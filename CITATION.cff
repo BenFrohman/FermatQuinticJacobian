@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use or reference this repository, please cite it using the metadata below."
+title: "FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold"
+authors:
+  - family-names: "Frohman"
+    given-names: "Benjamin Stanley"
+    orcid: "https://orcid.org/0009-0006-7068-3718"
+doi: 10.5281/zenodo.23652994
+url: "https://github.com/BenFrohman/FermatQuinticJacobian"
+repository-code: "https://github.com/BenFrohman/FermatQuinticJacobian"
+license: Apache-2.0
+copyright: "Copyright (c) 2026 Benjamin Stanley Frohman"
+date-released: "2026-10-03"

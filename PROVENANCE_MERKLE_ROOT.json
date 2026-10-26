@@ -1,0 +1,75 @@
+{
+  "schema": "sealguard-merkle-provenance-v1.0",
+  "repository": "BenFrohman/FermatQuinticJacobian",
+  "doi": "10.5281/zenodo.23652994",
+  "author": "Benjamin Stanley Frohman",
+  "orcid": "0009-0006-7068-3718",
+  "license": "Apache-2.0",
+  "timestamp_cdt": "2026-10-25T19:10:00-05:00",
+  "merkle_root_sha256": "83ad2500ea23e6808c156f3f05369ca099a02d763a989dfbccd6235be07cab84",
+  "ed25519_key_fingerprint": "b428fb72676f1c52",
+  "ed25519_signature": "7e03a6b60c734698887ed17203864d5a9b583cb036e738f6433655411ec78c5bc3471d0a73c2879de40c2674c1fd5f0c37a8944960b4bd80d16a48e47aea4d03",
+  "leaf_count": 12,
+  "leaves": [
+    {
+      "path": ".zenodo.json",
+      "sha256": "42f130a78e50dea136f689cc0a9bc51ca4a4945a9a20496584f579da128bffb8",
+      "bytes": 1168
+    },
+    {
+      "path": "AUTHORS.md",
+      "sha256": "1732529c9d516b14378c2ea60b7a29a9dd01385bb5f302efa163c42b3dceb130",
+      "bytes": 320
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "8523872e88eeafaacf42f8849b63ea682d8f28dceb4a6097a7a916f091d07c9f",
+      "bytes": 610
+    },
+    {
+      "path": "FermatQuinticJacobian.lean",
+      "sha256": "d94c40a67456932d70a5c64e04ba3bf7259dc0d63347a81bfd17fe8ce5298e59",
+      "bytes": 1871
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "ec43eec7417d548fb78a8dc50830f1d854b91a89c2daf0d4e957601515c15e87",
+      "bytes": 10773
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "fffa00b41ac0ce912b0fd4b035f977beae62d75d6ffb90e09b6ac1ba1f38be7d",
+      "bytes": 604
+    },
+    {
+      "path": "README.md",
+      "sha256": "4fc99a8ae0c9c38a452cade54ddd08ca9bd3dace359961ed49e0046e7b0863d4",
+      "bytes": 2248
+    },
+    {
+      "path": "audit/TITAN_AUDIT_CERTIFICATE.json",
+      "sha256": "0f638678d6b297407006860be690770549d8b1b7d258b7067c7f1e9b5e1192c9",
+      "bytes": 867
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "3f8f4cf04ccf5e359dadc78c7c525b53eb8760960093982b0110b5694ce39e5b",
+      "bytes": 288
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "8f6680f8389e8adee06cb2bd44372c6d60dce0e8301630b61a99a5642d1bd71b",
+      "bytes": 25
+    },
+    {
+      "path": "paper/FermatQuinticJacobian_Technical_Monograph_2026.pdf",
+      "sha256": "ed65ae28f765a875c42d1585e9e6d83cfdcafb6fd4fec9899a00f1c315ba4c68",
+      "bytes": 48286
+    },
+    {
+      "path": "paper/FermatQuinticJacobian_Technical_Monograph_2026.tex",
+      "sha256": "908db33c35e339ab8b6c0abf5d18d4980c22fe29ff3353561bf5753c110725d9",
+      "bytes": 4265
+    }
+  ]
+}

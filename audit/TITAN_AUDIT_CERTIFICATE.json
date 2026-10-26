@@ -1,0 +1,23 @@
+{
+  "schema": "titan-audit-v1.0",
+  "repository": "BenFrohman/FermatQuinticJacobian",
+  "doi": "10.5281/zenodo.23652994",
+  "author": "Benjamin Stanley Frohman",
+  "orcid": "0009-0006-7068-3718",
+  "license": "Apache-2.0",
+  "timestamp_cdt": "2026-10-25T19:10:00-05:00",
+  "lean_module_count": 1,
+  "sorry_count": 0,
+  "modules": [
+    {
+      "file": "FermatQuinticJacobian.lean",
+      "sha256": "d94c40a67456932d70a5c64e04ba3bf7259dc0d63347a81bfd17fe8ce5298e59",
+      "declarations": 3,
+      "sorry_tokens": 0
+    }
+  ],
+  "verdict": "PASS_ZERO_SORRY_HONEST_BOUNDARY",
+  "payload_sha256": "dba7688a54ac75c99650571bd0bc8a8b560c1a57ef04428ecbb40e029e239b2e",
+  "ed25519_key_fingerprint": "b428fb72676f1c52",
+  "ed25519_signature": "40ff9d527ff463da36ecdfd57b7868eb9e27b51c239e6bcac2c894098c056edce2c1e82688c516da50524bdd2ce3d2b5804413e3ccf4273da7a4c5b3886b2802"
+}

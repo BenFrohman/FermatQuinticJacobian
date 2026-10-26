@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\title{\textbf{FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold}}
+\author{Benjamin Stanley Frohman\\
+\small ORCID: \href{https://orcid.org/0009-0006-7068-3718}{0009-0006-7068-3718} \quad|\quad
+GitHub: \href{https://github.com/BenFrohman/FermatQuinticJacobian}{\texttt{BenFrohman/FermatQuinticJacobian}}\\
+\small Dedicated 1-to-1 Zenodo DOI: \href{https://doi.org/10.5281/zenodo.23652994}{\texttt{10.5281/zenodo.23652994}}}
+\date{Earliest Commit Provenance: 2026-10-03 12:49:57 PM CDT (UTC-5)\\
+Siloed Archival Edition: October 25, 2026 (America/Chicago CDT)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Standalone Lean 4 formalization (`FermatQuinticJacobian.lean`) certifying the non-degeneracy of the partial derivatives and Jacobian smoothness criterion for the Fermat quintic fourfold V(x\_0\textasciicircum{}5 + ... + x\_5\textasciicircum{}5) subset P\textasciicircum{}5.
+\end{abstract}
+
+\section{Scope, Scientific Honesty, and Non-Claim Boundary}
+Certifies Jacobian smoothness of the Fermat quintic host variety in Lean 4. Explicitly states that Jacobian smoothness is a prerequisite geometric property and not a resolution of the Hodge Conjecture.
+
+\begin{itemize}
+  \item \textbf{Repository:} \texttt{https://github.com/BenFrohman/FermatQuinticJacobian}
+  \item \textbf{Dedicated 1-to-1 Zenodo DOI:} \texttt{10.5281/zenodo.23652994}
+  \item \textbf{Earliest Git Commit SHA:} \texttt{777a2e97451ec4a366c03bbacb4333c001bb833d} (2026-10-03 12:49:57 PM CDT (UTC-5))
+  \item \textbf{License \& Copyright:} Copyright \textcopyright\ 2026 Benjamin Stanley Frohman. Licensed under the Apache License, Version 2.0.
+\end{itemize}
+
+\section{Technical Overview \& Repository Specification}
+Copyright (c) 2026 Benjamin Stanley Frohman (`@BenFrohman`).
+
+Released under the Apache License, Version 2.0. See `LICENSE` and `NOTICE`.
+
+A Lean 4 certificate, checked against Mathlib `v4.22.0`, that the Fermat quintic
+
+```text
+
+G = X0\textasciicircum{}5 + X1\textasciicircum{}5 + X2\textasciicircum{}5 + X3\textasciicircum{}5 + X4\textasciicircum{}5 + X5\textasciicircum{}5
+
+```
+
+has partial derivatives
+
+```text
+
+pderiv i G = 5 * X i \textasciicircum{} 4
+
+```
+
+Those forms vanish together only at the origin of affine 6-space. By the Jacobian
+
+criterion, `V(G)` in `P\textasciicircum{}5` is smooth.
+
+The theorem in the repository is `Hodge.FermatQuintic.partial\_eq`.
+
+This is not a proof of the Hodge conjecture. It does not construct a cycle from a
+
+Hodge class. It does not show that `H\textasciicircum{}\{3,1\}` vanishes: on this fourfold that
+
+primitive piece is the degree-4 part of `C[X\_i]/(X\_i\textasciicircum{}4)`, of dimension 120.
+
+The non-homogeneous expression
+
+`sum x\_i\textasciicircum{}5 - 5 x0 x1 x2 x3 x4 x5` is not used. The product of six variables has
+
+\section{Cryptographic Provenance \& File Inventory}
+Every source artifact in \texttt{BenFrohman/FermatQuinticJacobian} is audited via \texttt{titan-audit}
+(\texttt{audit/TITAN\_AUDIT\_CERTIFICATE.json}) and sealed under a deterministic SHA-256 Merkle tree via
+\texttt{sealguard} (\texttt{PROVENANCE\_MERKLE\_ROOT.json}) signed with Ed25519 key fingerprint
+\texttt{b428fb72676f1c52}.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.52\textwidth}rr}
+\toprule
+\textbf{Repository Path} & \textbf{Size} & \textbf{SHA-256 Prefix} \\
+\midrule
+\texttt{FermatQuinticJacobian.lean} & 1871 B & \texttt{d94c40a67456932d...} \\
+\texttt{LICENSE} & 11355 B & \texttt{9da72c2bee4f20ba...} \\
+\texttt{NOTICE} & 638 B & \texttt{1d6c88adb668f721...} \\
+\texttt{README.md} & 1106 B & \texttt{775cf9e9962b7aa2...} \\
+\texttt{lakefile.toml} & 288 B & \texttt{3f8f4cf04ccf5e35...} \\
+\texttt{lean-toolchain} & 25 B & \texttt{8f6680f8389e8ade...} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}\\
+\footnotesize
+\textbf{Attribution \& Licensing Notice:} Copyright \textcopyright\ 2026 Benjamin Stanley Frohman (ORCID: \texttt{0009-0006-7068-3718}).
+Licensed under the Apache License, Version 2.0.
+\end{document}

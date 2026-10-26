@@ -1,0 +1,27 @@
+{
+  "title": "FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold",
+  "upload_type": "software",
+  "description": "Standalone Lean 4 formalization (`FermatQuinticJacobian.lean`) certifying the non-degeneracy of the partial derivatives and Jacobian smoothness criterion for the Fermat quintic fourfold V(x_0^5 + ... + x_5^5) subset P^5. Certifies Jacobian smoothness of the Fermat quintic host variety in Lean 4. Explicitly states that Jacobian smoothness is a prerequisite geometric property and not a resolution of the Hodge Conjecture. Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under the Apache License, Version 2.0.",
+  "creators": [
+    {
+      "name": "Frohman, Benjamin Stanley",
+      "orcid": "0009-0006-7068-3718"
+    }
+  ],
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "keywords": [
+    "Lean 4",
+    "Fermat quintic fourfold",
+    "Jacobian ideal",
+    "Smooth projective variety",
+    "Milnor algebra"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/BenFrohman/FermatQuinticJacobian",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

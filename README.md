@@ -1,5 +1,7 @@
 # Fermat quintic Jacobian
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23652994.svg)](https://doi.org/10.5281/zenodo.23652994) [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
 Copyright (c) 2026 Benjamin Stanley Frohman (`@BenFrohman`).
 Released under the Apache License, Version 2.0. See `LICENSE` and `NOTICE`.
 
@@ -40,3 +42,14 @@ lake build
 ```
 
 Toolchain: Lean `v4.22.0`. Mathlib pin: `v4.22.0`.
+
+---
+## Archival DOI & Cryptographic Provenance
+
+- **Dedicated 1-to-1 Zenodo DOI:** [10.5281/zenodo.23652994](https://doi.org/10.5281/zenodo.23652994)
+- **Author:** Benjamin Stanley Frohman (ORCID: [0009-0006-7068-3718](https://orcid.org/0009-0006-7068-3718))
+- **License:** Apache License, Version 2.0 (`Copyright (c) 2026 Benjamin Stanley Frohman`)
+- **Earliest Commit Provenance:** `777a2e97451ec4a366c03bbacb4333c001bb833d` (2026-10-03 12:49:57 PM CDT (UTC-5))
+- **SealGuard SHA-256 Merkle Root:** `83ad2500ea23e6808c156f3f05369ca099a02d763a989dfbccd6235be07cab84` (`PROVENANCE_MERKLE_ROOT.json`)
+- **Titan Audit Certificate:** `audit/TITAN_AUDIT_CERTIFICATE.json` (Ed25519 key `b428fb72676f1c52`)
+- **Scope & Scientific Boundary:** Certifies Jacobian smoothness of the Fermat quintic host variety in Lean 4. Explicitly states that Jacobian smoothness is a prerequisite geometric property and not a resolution of the Hodge Conjecture.
