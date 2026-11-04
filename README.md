@@ -55,3 +55,8 @@ Toolchain: Lean `v4.22.0`. Mathlib pin: `v4.22.0`.
 - **SealGuard SHA-256 Merkle Root:** `83ad2500ea23e6808c156f3f05369ca099a02d763a989dfbccd6235be07cab84` (`PROVENANCE_MERKLE_ROOT.json`)
 - **Titan Audit Certificate:** `audit/TITAN_AUDIT_CERTIFICATE.json` (Ed25519 key `b428fb72676f1c52`)
 - **Scope & Scientific Boundary:** Certifies Jacobian smoothness of the Fermat quintic host variety in Lean 4. Explicitly states that Jacobian smoothness is a prerequisite geometric property and not a resolution of the Hodge Conjecture.
+
+## Zenodo archive
+
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23652993.svg)](https://doi.org/10.5281/zenodo.23652993) FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold — all versions: [10.5281/zenodo.23652993](https://doi.org/10.5281/zenodo.23652993); latest version: [10.5281/zenodo.23652994](https://doi.org/10.5281/zenodo.23652994)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23867529.svg)](https://doi.org/10.5281/zenodo.23867529) FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold — all versions: [10.5281/zenodo.23867529](https://doi.org/10.5281/zenodo.23867529); latest version: [10.5281/zenodo.23905187](https://doi.org/10.5281/zenodo.23905187)
