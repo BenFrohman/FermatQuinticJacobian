@@ -78,11 +78,11 @@ For a smooth hypersurface $X=V(G)\subset\PP^{n+1}$ of degree $d$, $n=\dim X$,
 Here $n=4$, $d=5$, so $h^{4-q,q}_{\mathrm{prim}}=\dim R_{5q-1}$:
 \begin{center}\begin{tabular}{cccc}\toprule
 $q$ & degree $5(q+1)-6$ & $h^{4-q,q}_{\mathrm{prim}}$ & Lean\\\midrule
-0 & $-1$ & 0 & \texttt{quintic\_h40\_zero}\\
+0 & $-1$ & 0 & \texttt{quintic\_primHodge\_h40\_zero}\\
 1 & 4 & 120 & \texttt{quintic\_primitive\_hodge}\\
 2 & 9 & 580 & \texttt{quintic\_primitive\_hodge}\\
 3 & 14 & 120 & \texttt{quintic\_primitive\_hodge}\\
-4 & 19 & 0 & (beyond socle degree 18)\\\bottomrule
+4 & 19 & 0 & \texttt{quintic\_primHodge\_h04\_zero}\\\bottomrule
 \end{tabular}\end{center}
 The total $0+120+580+120+0=820$ agrees with the Euler-characteristic computation of
 Section~\ref{sec:setup}, an independent check. Adding $h^2$ gives the middle row of the Hodge diamond
@@ -100,11 +100,16 @@ def conv (p q : List Nat) : List Nat :=
     ((List.range (k + 1)).map fun i => p.getD i 0 * q.getD (k - i) 0).sum
 def jacobianSeries (d : Nat) : List Nat :=
   (List.range 6).foldl (fun acc _ => conv acc (List.replicate (d - 1) 1)) [1]
-def primHodge (d q : Nat) : Nat := (jacobianSeries d).getD (d * (q + 1) - 6) 0
+def primHodge (d q : Nat) : Nat :=
+  if d * (q + 1) < 6 then 0
+  else (jacobianSeries d).getD (d * (q + 1) - 6) 0
 \end{verbatim}
 \texttt{conv} is the Cauchy product, so \texttt{jacobianSeries d} is the coefficient list of
 $(1+t+\dots+t^{d-2})^6$, the Hilbert series of $\CC[x_0,\dots,x_5]/(x_0^{d-1},\dots,x_5^{d-1})$, and
-\texttt{primHodge d q} is its coefficient in Griffiths degree $d(q+1)-6$. For $d=5$ the kernel evaluates
+\texttt{primHodge d q} is its coefficient in Griffiths degree $d(q+1)-6$, returning zero when that degree
+is negative. This guard is necessary because subtraction on Lean's natural numbers truncates
+at zero. The regression declarations \texttt{quintic\_primHodge\_h40\_zero} and
+\texttt{quintic\_primHodge\_h04\_zero} check the function at $q=0$ and $q=4$, respectively. For $d=5$ the kernel evaluates
 these closed terms by \texttt{decide}: \texttt{quintic\_series} (length 19, sum 4096) and
 \texttt{quintic\_primitive\_hodge} ($120,580,120$). The same functions give $(1,20,1)$ for the cubic fourfold and
 $(426,1751,426)$ for the sextic fourfold (\texttt{cubic\_primitive\_hodge}, \texttt{sextic\_primitive\_hodge}),
@@ -209,6 +214,8 @@ All machine-checked statements cited in this paper are in the repository
 \item \texttt{Hodge/DeformedQuinticHost.lean} (Dwork member $\psi=1$, PR~\#26);
 \item \texttt{Hodge/DworkQuinticPsi2.lean} (Dwork member $\psi=2$, PR~\#28).
 \end{itemize}
+The negative-degree guard and boundary regression declarations are included in the companion
+HODGE correction, commit \href{https://github.com/BenFrohman/HODGE/commit/38ae6815b3e76dfa39dae10c7a67b0f057a3d721}{\texttt{38ae6815b3e7}}. Reproduce these declarations from that revision rather than an older unguarded checkout.
 The counting functions \texttt{conv}, \texttt{jacobianSeries} and \texttt{primHodge} are defined in
 \texttt{Hodge/FermatCubicHost.lean} and reused. The polynomial is an honest
 \texttt{MvPolynomial (Fin 6) K} over an arbitrary field \texttt{K}; partial derivatives are Mathlib's
@@ -226,6 +233,8 @@ Lean declaration & Statement\\\midrule
 \texttt{QuinticHost.quintic\_series} & The coefficient list of $(1+t+t^2+t^3)^6$ has length 19 and sum 4096.\\
 \texttt{QuinticHost.quintic\_primitive\_hodge} & $R_4=120$, $R_9=580$, $R_{14}=120$.\\
 \texttt{QuinticHost.quintic\_h40\_zero} & $5\cdot 1<6$ (so the Griffiths degree for $h^{4,0}$ is negative).\\
+\texttt{QuinticHost.quintic\_primHodge\_h40\_zero} & The guarded function satisfies \texttt{primHodge 5 0 = 0}.\\
+\texttt{QuinticHost.quintic\_primHodge\_h04\_zero} & The function satisfies \texttt{primHodge 5 4 = 0}.\\
 \texttt{QuinticHost.quintic\_h31\_ne\_zero} & $R_4\neq 0$.\\
 \texttt{DeformedQuinticHost.G\_isHomogeneous} & $G_1=\sum x_i^5-5x_0x_1x_2x_3x_4$ is homogeneous of degree 5.\\
 \texttt{DeformedQuinticHost.singular\_at\_p} & $G_1(p)=0$ and $\partial_iG_1(p)=0$ for all $i$, $p=(1,1,1,1,1,0)$.\\
@@ -248,6 +257,7 @@ Declarations & \texttt{\#print axioms}\\\midrule
 \texttt{QuinticHost.\{G\_isHomogeneous, pderiv\_G, smooth\}} & \texttt{[propext, Classical.choice, Quot.sound]}\\
 \texttt{QuinticHost.\{quintic\_series, quintic\_primitive\_hodge, quintic\_h31\_ne\_zero\}} & \texttt{[propext]}\\
 \texttt{QuinticHost.quintic\_h40\_zero} & none\\
+\texttt{QuinticHost.\{quintic\_primHodge\_h40\_zero, quintic\_primHodge\_h04\_zero\}} & \texttt{[propext]}\\
 \texttt{DeformedQuinticHost.*} (3 declarations) & \texttt{[propext, Classical.choice, Quot.sound]}\\
 \texttt{DworkQuinticPsi2.\{G\_isHomogeneous, eval\_pderiv, smooth\}} & \texttt{[propext, Classical.choice, Quot.sound]}\\
 \texttt{DworkQuinticPsi2.\{psi\_not\_root, dwork\_primitive\_hodge\}} & \texttt{[propext]}\\
@@ -256,7 +266,7 @@ Declarations & \texttt{\#print axioms}\\\midrule
 step specific to this paper. The counting theorems are closed by \texttt{decide} and use only \texttt{propext}.
 \section{Reproducibility}
 \begin{itemize}
-\item Build: \texttt{git clone https://github.com/BenFrohman/HODGE; cd HODGE; lake exe cache get; lake build}.
+\item Build: \texttt{git clone https://github.com/BenFrohman/HODGE; cd HODGE; git checkout 38ae6815b3e76dfa39dae10c7a67b0f057a3d721; lake exe cache get; lake build}.
 \item Axiom audit: \texttt{lake env lean AxiomAudit.lean}; CI workflow \texttt{Lean certificate}.
 \item Singular scripts for $\psi=2$: \texttt{scripts/dwork\_quintic\_psi2/} (\texttt{hilb.sing}, \texttt{planes.sing},
 \texttt{fermat.sing}, \texttt{chars.py}) with outputs committed next to them.
