@@ -60,3 +60,7 @@ Toolchain: Lean `v4.22.0`. Mathlib pin: `v4.22.0`.
 
 - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23652993.svg)](https://doi.org/10.5281/zenodo.23652993) FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold — all versions: [10.5281/zenodo.23652993](https://doi.org/10.5281/zenodo.23652993); latest version: [10.5281/zenodo.23652994](https://doi.org/10.5281/zenodo.23652994)
 - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23867529.svg)](https://doi.org/10.5281/zenodo.23867529) FermatQuinticJacobian: Lean 4 Certificate for the Jacobian Smoothness of the Fermat Quintic Fourfold — all versions: [10.5281/zenodo.23867529](https://doi.org/10.5281/zenodo.23867529); latest version: [10.5281/zenodo.23905187](https://doi.org/10.5281/zenodo.23905187)
+
+## Citation
+
+Cite this work with [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button). Zenodo DOI: [10.5281/zenodo.23652994](https://doi.org/10.5281/zenodo.23652994).
