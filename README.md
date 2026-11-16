@@ -4,6 +4,10 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23652994.svg)](https://doi.org/10.5281/zenodo.23652994) [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
+## Kernel certificate
+
+[certificates/CERTIFICATE.md](certificates/CERTIFICATE.md): commit `7fd8253`, `leanprover/lean4:v4.22.0`. `lake build` passes; the sorry/axiom scan finds 0 hits; **3 theorems depend only on `propext`, `Classical.choice`, `Quot.sound`**; 1 of 1 modules replayed through the kernel, 0 failures ([CI run](https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43937977108)).
+
 Copyright (c) 2026 Benjamin Stanley Frohman (`@BenFrohman`).
 Released under the Apache License, Version 2.0. See `LICENSE` and `NOTICE`.
 

@@ -1,0 +1,4 @@
+'Hodge.FermatQuintic.partial_eq' depends on axioms: [propext, Quot.sound, Classical.choice]
+'Hodge.FermatQuintic.partial_off' depends on axioms: [propext, Quot.sound, Classical.choice]
+'Hodge.FermatQuintic.partial_on' depends on axioms: [propext, Quot.sound, Classical.choice]
+AUDIT PASS: 3 theorems in 1 modules depend only on propext, Classical.choice, Quot.sound (or on no axioms)

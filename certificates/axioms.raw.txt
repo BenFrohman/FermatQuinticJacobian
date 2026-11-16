@@ -1,0 +1,3 @@
+'Hodge.FermatQuintic.partial_on' depends on axioms: [propext, Quot.sound, Classical.choice] [module FermatQuinticJacobian]
+'Hodge.FermatQuintic.partial_eq' depends on axioms: [propext, Quot.sound, Classical.choice] [module FermatQuinticJacobian]
+'Hodge.FermatQuintic.partial_off' depends on axioms: [propext, Quot.sound, Classical.choice] [module FermatQuinticJacobian]
