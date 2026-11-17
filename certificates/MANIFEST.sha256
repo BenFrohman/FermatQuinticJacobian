@@ -1,0 +1,16 @@
+# Kernel certificate manifest
+# source commit: ea42765fb8945075f62723b2c42ac77b78ecb064
+# lean-toolchain: leanprover/lean4:v4.22.0
+# Mathlib: 79e94a093aff4a60fb1b1f92d9681e407124c2ca (lake-manifest.json; inputRev v4.22.0)
+# CI run: https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43954457900
+# rebuild: git clone https://github.com/BenFrohman/FermatQuinticJacobian.git && cd FermatQuinticJacobian && git checkout ea42765fb8945075f62723b2c42ac77b78ecb064 && lake exe cache get && lake build && python3 certificates/tools/sorry_scan.py && python3 certificates/tools/gen_audit.py /tmp/KernelCertificateAudit.lean /tmp/modules.txt && lake env lean /tmp/KernelCertificateAudit.lean > /tmp/axioms.raw.txt && python3 certificates/tools/check_audit.py /tmp/axioms.raw.txt | tail -n 1
+# verify: cd certificates && sha256sum -c MANIFEST.sha256
+bb09190e80aa651edb30f6f490dc7391f62771c19165e3fb5be0450480692705  CERTIFICATE.md
+933663df0c6f9838714582bd1e30fccf749b9fb7097c8aca583b01ef0e872c6a  KernelCertificateAudit.lean.txt
+4089331cccbb6d7e7f7a51ab35e7182ab5587891159ac74d7baaf667907fd466  axioms.raw.txt
+a0601329ae8d30c94774de962d65215187f13f35c7ff0724647083ab3b51946e  axioms.txt
+c96c69a4deed3209174dfb2a47a7b772de7fd35de8e7b83918fb944ee7989e5b  build.log
+ff1de691b1c9bf1d870a95faa3cf39404533338b8af6ef45562cb2ac1e56e387  environment.txt
+ed86087b9f53c090b1ca1781dc6add8306fc65e97e516dd6e15890660c63baaa  leanchecker.txt
+0f3cc92f6e5e8c34875965db05aff6c2db67e25ac3130ddda8407f5f1c419252  modules.txt
+6449b8d6057c95fbe2771924993805383a0a6c2aa6145c8ea2143551864bd491  sorry-scan.txt
