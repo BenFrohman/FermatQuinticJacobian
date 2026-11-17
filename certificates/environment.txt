@@ -1,6 +1,6 @@
-commit: 7fd8253ca4c23ceb71b4a51920242ba600580767
+commit: ea42765fb8945075f62723b2c42ac77b78ecb064
 lean-toolchain: leanprover/lean4:v4.22.0
 lean --version: Lean (version 4.22.0, x86_64-unknown-linux-gnu, commit ba2cbbf09d4978f416e0ebd1fceeebc2c4138c05, Release)
 lake --version: Lake version 5.0.0-src+ba2cbbf (Lean version 4.22.0)
-date (UTC): 2026-11-16T19:21:52Z
-run: https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43937977108
+date (UTC): 2026-11-16T20:53:57Z
+run: https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43954457900

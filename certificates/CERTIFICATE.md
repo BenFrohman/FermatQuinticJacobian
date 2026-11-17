@@ -5,13 +5,13 @@ This file records a reproducible machine check of the Lean 4 development in this
 | Item | Value |
 |---|---|
 | Repository | https://github.com/BenFrohman/FermatQuinticJacobian |
-| Certified commit | `7fd8253ca4c23ceb71b4a51920242ba600580767` (branch `chore/kernel-certificate`) |
-| Lean sources | identical to `main` at `d76bf6556a335c2e97994b14e6f02ab6791efc3c`: no `.lean`, lakefile, manifest or toolchain file differs; the certified commit only adds CI and the scripts in `certificates/tools/` |
+| Certified commit | `ea42765fb8945075f62723b2c42ac77b78ecb064` (branch `main`) |
+| Lean sources | the certified commit is the `main` head itself; the certificate files were committed afterwards in a commit that changes no `.lean`, lakefile, manifest or toolchain file |
 | lean-toolchain | `leanprover/lean4:v4.22.0` |
 | Lean | Lean (version 4.22.0, x86_64-unknown-linux-gnu, commit ba2cbbf09d4978f416e0ebd1fceeebc2c4138c05, Release) |
 | Mathlib | `79e94a093aff4a60fb1b1f92d9681e407124c2ca` (lake-manifest.json; inputRev `v4.22.0`) |
-| Date (UTC) | 2026-11-16T19:21:52Z |
-| CI run | https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43937977108 |
+| Date (UTC) | 2026-11-16T20:53:57Z |
+| CI run | https://github.com/BenFrohman/FermatQuinticJacobian/actions/runs/43954457900 |
 | `lake build` | `Build completed successfully.` ([build.log](build.log)) |
 | sorry / admit / native_decide / axiom scan | `RESULT: 0 hits` ([sorry-scan.txt](sorry-scan.txt)) |
 | `#print axioms` | `AUDIT PASS: 3 theorems in 1 modules depend only on propext, Classical.choice, Quot.sound (or on no axioms)` ([axioms.txt](axioms.txt)) |
@@ -39,5 +39,5 @@ Full `#print axioms` output (verbatim from `axioms.txt`):
 ## Rebuild
 
 ```
-git clone https://github.com/BenFrohman/FermatQuinticJacobian.git && cd FermatQuinticJacobian && git checkout 7fd8253ca4c23ceb71b4a51920242ba600580767 && lake exe cache get && lake build && python3 certificates/tools/sorry_scan.py && python3 certificates/tools/gen_audit.py /tmp/KernelCertificateAudit.lean /tmp/modules.txt && lake env lean /tmp/KernelCertificateAudit.lean > /tmp/axioms.raw.txt && python3 certificates/tools/check_audit.py /tmp/axioms.raw.txt | tail -n 1
+git clone https://github.com/BenFrohman/FermatQuinticJacobian.git && cd FermatQuinticJacobian && git checkout ea42765fb8945075f62723b2c42ac77b78ecb064 && lake exe cache get && lake build && python3 certificates/tools/sorry_scan.py && python3 certificates/tools/gen_audit.py /tmp/KernelCertificateAudit.lean /tmp/modules.txt && lake env lean /tmp/KernelCertificateAudit.lean > /tmp/axioms.raw.txt && python3 certificates/tools/check_audit.py /tmp/axioms.raw.txt | tail -n 1
 ```
